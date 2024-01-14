@@ -1,6 +1,59 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import '~handsontable/dist/handsontable.full.css';
+@import "../node_modules/bootstrap/scss/bootstrap";
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.red-button {
+  @extend .text-danger;
+}
+
+.blue-button {
+  @extend .text-primary;
+}
+
+.green-button {
+  @extend .text-success;
+}
+
+.mr-1 {
+  margin-right: 0.25rem !important
+}
+
+.mr-2 {
+  margin-right: 0.5rem !important
+}
+
+.mr-3 {
+  margin-right: 1rem !important
+}
+
+.mr-4 {
+  margin-right: 1.5rem !important
+}
+
+.mr-5 {
+  margin-right: 2rem !important
+}
+
+.personal-table table td {
+  text-align: center !important;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.w-50 {
+  width: 50%;
+}

@@ -1,0 +1,14 @@
+.table-content {
+  width: 100%;
+  overflow: auto;
+}
+
+.day {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.personal-table table td {
+  text-align: center !important;
+}

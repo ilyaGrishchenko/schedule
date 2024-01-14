@@ -1,0 +1,60 @@
+<div class="mb-3">
+  <button
+    class="btn btn-sm btn-outline-secondary"
+    title="Очистить"
+    (click)="clearSelected()"
+  >
+    Очистить
+  </button>
+</div>
+
+<div class="mb-3">
+  <button
+    *ngFor="let button of buttons.alert; index as i"
+    class="btn btn-sm btn-outline-danger mr-3"
+    title="{{button.text}}"
+    (click)="getSelected(button.letter, button.type)">
+      {{button.letter}}
+  </button>
+</div>
+
+<div class="mb-3">
+  <button
+    *ngFor="let button of buttons.info; index as i"
+    class="btn btn-sm btn-outline-primary mr-3"
+    title="{{button.text}}"
+    (click)="getSelected(button.letter, button.type)">
+      {{button.letter}}
+  </button>
+</div>
+
+<div class="mb-3" *ngIf="projects">
+  <button
+    *ngFor="let project of projects; index as i"
+    class="btn btn-sm btn-outline-success mr-3"
+    title="{{project.name}}"
+    (click)="getSelected(project.letter, 'green-button')">
+      {{project.letter}}
+  </button>
+</div>
+
+<div id="personal-table" class="personal-table" *ngIf="personal && dates"></div>
+
+<h3 class="mt-4">Проекты</h3>
+
+<button class="btn btn-sm btn-secondary">Добавить проект</button>
+
+<table class="table w-50" *ngIf="projects">
+  <thead>
+    <tr>
+      <th>Название</th>
+      <th>Сокращение</th>
+      <th>Менеджер</th>
+    </tr>
+  </thead>
+  <tr *ngFor="let project of projects">
+    <td>{{project.name}}</td>
+    <td>{{project.letter}}</td>
+    <td>{{project.manager}}</td>
+  </tr>
+</table>
